@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-const url=`mongodb+srv://soumyaditya2021:utzzLtftRFkAA7nz@workshopcluster.ao6bkwg.mongodb.net/?retryWrites=true&w=majority&appName=WorkshopCluster`;
+const url=process.env.MONGO_URL || "127.0.0.1:"
 
 const connection= mongoose.connect(url);
 connection

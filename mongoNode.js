@@ -2,7 +2,7 @@ const http = require('http');
 const {MongoClient , ObjectId} = require('mongodb');
 const urlModule = require('url')
 
-const mongoUrl = `mongodb+srv://soumyaditya2021:utzzLtftRFkAA7nz@workshopcluster.ao6bkwg.mongodb.net/?retryWrites=true&w=majority&appName=WorkshopCluster`
+const mongoUrl = process.env.MONGO_URL || '127.0.0.1:';
 const client = new MongoClient(mongoUrl);
 const dbName = 'Polaris_School'
 
